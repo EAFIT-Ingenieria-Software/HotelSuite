@@ -2,10 +2,11 @@
 
 En este vamos a tratar todos los temas vistos en la curso de Ingeniería de Software en un solo caso, el cuál es:
 
-_Una tienda desea mejorar su eficiencia en la gestión de inventarios. Actualmente, el proceso se realiza manualmente, lo que lleva a errores, pérdidas de tiempo y dificultades para mantener registros precisos. La tienda necesita un sistema de software que automatice y simplifique la gestión de inventarios._
+_Desarrollar una solución de software para un hotel de tamaño mediano. El objetivo principal del sistema es automatizar y optimizar las operaciones diarias del hotel, desde la gestión de reservas hasta el control de inventario y la generación de informes financieros. El sistema debe ser capaz de manejar múltiples funciones y debe ser fácil de usar tanto para el personal del hotel como para los clientes._
 
 ## Temas
 
+- [Visión del producto](Vision.md)
 - [Requisitos](Requisitos.md)
 
 **Realizado por**
