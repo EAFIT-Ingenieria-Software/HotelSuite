@@ -10,6 +10,6 @@ _Desarrollar una solución de software para un hotel de tamaño mediano. El obje
 - [Interesados potenciales](Interesados_potenciales.md)
 - [Requisitos](Requisitos.md)
 
-**Realizado por**
+### Realizado por
 
 [Miguel Sosa](https://github.com/msosav)

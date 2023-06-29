@@ -1,8 +1,8 @@
-## Visión
+# Visión
 
 Es un producto para hoteles y establecimientos de hotelería que tienen la necesidad de optimizar y automatizar sus operaciones diarias, desde la gestión de reservas hasta el control de inventario y generación de informes financieros. Se llama "HotelSuite" y es un sistema de gestión hotelera completo y eficiente que proporciona una solución integral para la administración y operación de hoteles, brindando beneficios significativos en términos de eficiencia, precisión y satisfacción del cliente. A diferencia de los sistemas de gestión hotelera tradicionales o alternativas personalizadas, nuestro producto HotelSuite se destaca por su facilidad de uso, escalabilidad y capacidades avanzadas de análisis y generación de informes, lo que permite a los hoteles mejorar su productividad, maximizar la ocupación de habitaciones y optimizar la experiencia del cliente.
 
-### Grupo objetivo de interesados
+## Grupo objetivo de interesados
 
 - **Propietarios y gerentes de hoteles:** Son los principales interesados en el producto, ya que buscan mejorar la eficiencia y rentabilidad de sus establecimientos. Están interesados en características como la gestión de reservas, control de inventario, generación de informes financieros y análisis de desempeño.
 
@@ -16,7 +16,7 @@ Es un producto para hoteles y establecimientos de hotelería que tienen la neces
 
 - **Proveedores y socios comerciales:** Pueden estar interesados en integrarse con el sistema de gestión hotelera para facilitar la gestión de suministros, facturación y pagos. Les interesa contar con una plataforma que les permita interactuar de manera eficiente con el hotel.
 
-### Necesidades de los interesados
+## Necesidades de los interesados
 
 - **Propietarios y gerentes de hoteles:**
   - Necesitan optimizar las operaciones diarias del hotel para maximizar la rentabilidad.
@@ -52,7 +52,7 @@ Es un producto para hoteles y establecimientos de hotelería que tienen la neces
   - Requieren una herramienta que les permita gestionar facturas y pagos de manera eficiente.
   - Desean una comunicación efectiva con el hotel para coordinar entregas y servicios.
 
-### Características del producto
+## Características del producto
 
 - **Gestión de reservas:** Permite a los clientes realizar reservas en línea de manera fácil y rápida. El personal del hotel puede verificar la disponibilidad de habitaciones, gestionar las reservas y mantener un calendario actualizado.
 
@@ -74,7 +74,7 @@ Es un producto para hoteles y establecimientos de hotelería que tienen la neces
 
 - **Personalización y adaptabilidad:** Permite personalizar ciertos aspectos del sistema, como la configuración de tarifas, servicios adicionales y reglas de cancelación, para adaptarse a las políticas y necesidades específicas de cada hotel.
 
-### Beneficios
+## Beneficios
 
 - **Eficiencia operativa:** HotelSuite automatiza y optimiza las operaciones diarias del hotel, desde la gestión de reservas hasta la generación de informes financieros. Esto mejora la eficiencia y reduce la carga de trabajo manual, permitiendo al personal del hotel centrarse en ofrecer un servicio de calidad.
 
