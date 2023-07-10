@@ -10,6 +10,7 @@ _Desarrollar una solución de software para un hotel de tamaño mediano. El obje
 - [Interesados potenciales](Interesados_potenciales.md)
 - [Requisitos](Requisitos.md)
 - [Historias de usuario](Historias_de_usuario.md)
+- [User stoy mapping](User_story_mapping.pdf)
 
 ### Realizado por
 
