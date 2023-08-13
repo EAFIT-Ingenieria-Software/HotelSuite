@@ -13,3 +13,10 @@ _Desarrollar una solución de software para un hotel de tamaño mediano. El obje
 - [Casos de uso](Casos_de_uso.md)
 - [User stoy mapping](User_story_mapping.pdf)
 - [Diagrama de estados](Diagrama_de_estados.md)
+- [Diagrama de actividades](Diagrama_de_actividades.md)
+- [Diagrama de modelo de dominio](Diagrama_de_modelo_de_dominio.md)
+- [Diagrama de secuencia](Diagrama_de_secuencia.md)
+
+## Entregas
+
+- [Entrega 1](Entrega_1.pdf)
