@@ -146,21 +146,22 @@
 
 - **RNF2:** El sistema debe cumplir con los estándares de accesibilidad web para garantizar su uso por personas con discapacidades.
 
-  - _US:_ Como usuario del sistema, quiero recibir notificaciones automáticas de confirmación de reserva, tanto como huésped y como personal del hotel, para tener información actualizada y asegurar una comunicación fluida.
+  - _US:_ Como usuario del sistema, quiero que cumpla con los estándares de accesibilidad web, para garantizar que pueda ser utilizado por personas con discapacidades y brindar una experiencia inclusiva para todos los usuarios.
+
     - Criterios de Aceptación:
-      - Después de realizar una reserva, el sistema envía automáticamente una notificación de confirmación al correo electrónico del huésped, que incluye los detalles de la reserva.
-      - El personal del hotel también recibe una notificación de confirmación de reserva, que les permite preparar adecuadamente para la llegada del huésped.
-      - Las notificaciones de confirmación son claras, completas y contienen toda la información relevante, como fechas, detalles de la habitación, servicios adicionales, etc.
-      - Las notificaciones se envían de manera inmediata y confiable, garantizando una comunicación eficiente entre el sistema, los huéspedes y el personal del hotel.
+      - El sistema sigue las pautas de accesibilidad web reconocidas, como las WCAG (Web Content Accessibility Guidelines).
+      - Se implementan características y funcionalidades que facilitan la navegación y uso del sistema para personas con discapacidades visuales, auditivas o motoras.
+      - Los elementos de interfaz, como botones, enlaces y formularios, son accesibles mediante lectores de pantalla y otros dispositivos de asistencia.
+      - Se proporcionan alternativas textuales para imágenes y contenido multimedia, y se utilizan colores y contrastes adecuados para facilitar la legibilidad.
 
 - **RNF3:** El sistema debe tener una interfaz multilingüe para atender a huéspedes internacionales.
 
-  - _US:_ Como usuario del sistema, quiero que el sistema genere informes financieros periódicos sobre ingresos, gastos y rendimiento del hotel, para tener una visión clara de la situación financiera.
+  - _US:_ Como usuario del sistema, quiero que tenga una interfaz multilingüe, para que los huéspedes internacionales puedan utilizar el sistema en su idioma preferido.
     - Criterios de Aceptación:
-      - El sistema genera informes financieros periódicos, como informes mensuales, trimestrales o anuales, sobre ingresos, gastos y rendimiento del hotel.
-      - Los informes muestran información detallada y precisa, presentada de manera clara y comprensible.
-      - Puedo acceder a los informes a través de una sección dedicada en el sistema, donde puedo seleccionar el período de tiempo deseado y generar el informe correspondiente.
-      - Los informes son exportables en diferentes formatos, como PDF o Excel, para su fácil visualización, impresión o análisis adicional.
+      - El sistema ofrece una selección de idiomas disponibles para que los usuarios elijan el idioma de su preferencia.
+      - La interfaz del sistema se traduce y adapta correctamente al idioma seleccionado, incluyendo textos, botones, mensajes de error, etc.
+      - Los huéspedes pueden cambiar el idioma en cualquier momento y la interfaz se actualiza instantáneamente.
+      - La traducción de los textos y términos es precisa y comprensible, evitando confusiones o malentendidos en la interfaz multilingüe.
 
 - **RE1:** El sistema debe estar disponible para su uso en múltiples hoteles simultáneamente.
 

@@ -13,7 +13,3 @@ _Desarrollar una solución de software para un hotel de tamaño mediano. El obje
 - [Casos de uso](Casos_de_uso.md)
 - [User stoy mapping](User_story_mapping.pdf)
 - [Diagrama de estados](Diagrama_de_estados.md)
-
-### Realizado por
-
-[Miguel Sosa](https://github.com/msosav)
