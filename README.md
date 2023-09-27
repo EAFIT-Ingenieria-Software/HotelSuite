@@ -16,6 +16,9 @@ _Desarrollar una solución de software para un hotel de tamaño mediano. El obje
 - [Diagrama de actividades](Diagrama_de_actividades.md)
 - [Diagrama de modelo de dominio](Diagrama_de_modelo_de_dominio.md)
 - [Diagrama de secuencia](Diagrama_de_secuencia.md)
+- [Diagrama de clases](Diagrama_de_clases.md)
+- [Diagrama de arquitectura](Diagrama_de_arquitectura.md)
+- [Diagrama de despliegue](Diagrama_de_despliegue.md)
 
 ## Entregas
 
