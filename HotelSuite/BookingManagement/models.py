@@ -85,7 +85,7 @@ class Room(models.Model):
 class Item(models.Model):
     id = models.AutoField(primary_key=True)
     price = models.IntegerField()
-    roomId = models.ForeignKey(Room, on_delete=models.CASCADE)
+    room = models.ForeignKey(Room, on_delete=models.CASCADE)
     creationDate = models.DateTimeField(auto_now_add=True)
     updateDate = models.DateTimeField(auto_now=True)
 
@@ -98,11 +98,11 @@ class Item(models.Model):
     def setPrice(self, price: int):
         self.price = price
 
-    def getRoomId(self) -> int:
-        return self.roomId
+    def getRoom(self) -> Room:
+        return self.room
 
-    def setRoomId(self, roomId: int):
-        self.roomId = roomId
+    def setRoom(self, room: Room):
+        self.room = room
 
     def getCreationDate(self) -> str:
         return self.creationDate
