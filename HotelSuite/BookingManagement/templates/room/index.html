@@ -1,19 +1,21 @@
 {% extends '../layouts/app.html' %}
 {% block title %}{{templateData.title}}{% endblock %}
 {% block content %}
-    {% for room in templateData.rooms %}
-        <div class="col-md-4 col-lg-3 mb-2 py-5">
-            <div class="card">
-                <img src="https://imgs.search.brave.com/tvuYS1ojA168YBGw_syCk7K-35VJqfrIibBdFS7gZc8/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvODQz/ODIzNjU2L3Bob3Rv/L2hvdGVsLXJvb20u/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PTgtWk5BNTJlNUds/UHV1UVBYcVpSZ3NU/TzlXUlp3WmdGdERv/dHlDNkNHSFk9" class="card-img-top img-card">
-                <div class="card-body text-center">
-                    <a href="{% url 'room.show' id=room.get_id %}"
-                       class="btn bg-primary text-white">{{ room.get_type }}</a>
-                    <div class="col d-block mt-3">
-                        <h6 class="card-subtitle" id="card-price">${{ room.get_price }}</h6>
-                        <h7 class="card-subtitle"><small><b>Capacity:</b> {{ room.get_capacity }}</small></h6>
+    <div class="row">
+        {% for room in templateData.rooms %}
+            <div class="col-md-4 col-lg-3 mb-2 py-5">
+                <div class="card">
+                    <img src="https://imgs.search.brave.com/tvuYS1ojA168YBGw_syCk7K-35VJqfrIibBdFS7gZc8/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvODQz/ODIzNjU2L3Bob3Rv/L2hvdGVsLXJvb20u/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PTgtWk5BNTJlNUds/UHV1UVBYcVpSZ3NU/TzlXUlp3WmdGdERv/dHlDNkNHSFk9" class="card-img-top img-card">
+                    <div class="card-body text-center">
+                        <a href="{% url 'room.show' id=room.get_id %}"
+                           class="btn bg-primary text-white">{{ room.get_type }}</a>
+                        <div class="col d-block mt-3">
+                            <h6 class="card-subtitle" id="card-price">${{ room.get_price }}</h6>
+                            <h7 class="card-subtitle"><small><b>Capacity:</b> {{ room.get_capacity }}</small></h6>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
 {% endblock %}
