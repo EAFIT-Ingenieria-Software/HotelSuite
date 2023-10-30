@@ -14,31 +14,31 @@ class Booking(models.Model):
     def __str__(self):
         return f'{self.id}'
 
-    def get_id(self) -> int:
+    def get_id(self):
         return self.id
 
-    def get_entrance(self) -> str:
+    def get_entrance(self):
         return self.entrance
 
     def set_entrance(self, entrance: str):
         self.entrance = entrance
 
-    def get_departure(self) -> str:
+    def get_departure(self):
         return self.departure
 
     def set_departure(self, departure: str):
         self.departure = departure
 
-    def get_price(self) -> int:
+    def get_price(self):
         return self.price
 
     def set_price(self, price: int):
         self.price = price
 
-    def get_creation_date(self) -> str:
+    def get_creation_date(self):
         return self.creationDate
 
-    def get_update_date(self) -> str:
+    def get_update_date(self):
         return self.updateDate
 
 
@@ -55,37 +55,43 @@ class Room(models.Model):
     def __str__(self):
         return f'{self.number}'
 
-    def get_id(self) -> int:
+    def get_id(self):
         return self.id
 
-    def get_number(self) -> int:
+    def get_number(self):
         return self.number
 
     def set_number(self, number: int):
         self.number = number
 
-    def get_type(self) -> str:
+    def get_type(self):
         return self.type
 
     def set_type(self, type: str):
         self.type = type
 
-    def get_availability(self) -> bool:
+    def get_availability(self):
         return self.availability
 
     def set_availability(self, availability: bool):
         self.availability = availability
 
-    def get_price(self) -> int:
+    def get_price(self):
         return self.price
 
     def set_price(self, price: int):
         self.price = price
 
-    def get_creation_date(self) -> str:
+    def get_capacity(self):
+        return self.capacity
+    
+    def set_capacity(self, capacity: int):
+        self.capacity = capacity
+
+    def get_creation_date(self):
         return self.creationDate
 
-    def get_update_date(self) -> str:
+    def get_update_date(self):
         return self.updateDate
 
 
@@ -99,23 +105,23 @@ class Item(models.Model):
     def __str__(self):
         return f'{self.id}'
 
-    def get_id(self) -> int:
+    def get_id(self):
         return self.id
 
-    def get_price(self) -> int:
+    def get_price(self):
         return self.price
 
     def set_price(self, price: int):
         self.price = price
 
-    def get_room(self) -> Room:
+    def get_room(self):
         return self.room
 
     def set_room(self, room: Room):
         self.room = room
 
-    def get_creation_date(self) -> str:
+    def get_creation_date(self):
         return self.creationDate
 
-    def get_update_date(self) -> str:
+    def get_update_date(self):
         return self.updateDate
