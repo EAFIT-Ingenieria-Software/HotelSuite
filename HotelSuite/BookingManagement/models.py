@@ -11,6 +11,9 @@ class Booking(models.Model):
     creationDate = models.DateTimeField(auto_now_add=True)
     updateDate = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return f'{self.id}'
+
     def get_id(self) -> int:
         return self.id
 
@@ -47,6 +50,9 @@ class Room(models.Model):
     price = models.IntegerField()
     creationDate = models.DateTimeField(auto_now_add=True)
     updateDate = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f'{self.number}'
 
     def get_id(self) -> int:
         return self.id
@@ -88,6 +94,9 @@ class Item(models.Model):
     room = models.ForeignKey(Room, on_delete=models.CASCADE)
     creationDate = models.DateTimeField(auto_now_add=True)
     updateDate = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f'{self.id}'
 
     def get_id(self) -> int:
         return self.id
