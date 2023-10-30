@@ -11,31 +11,31 @@ class Booking(models.Model):
     creationDate = models.DateTimeField(auto_now_add=True)
     updateDate = models.DateTimeField(auto_now=True)
 
-    def getId(self) -> int:
+    def get_id(self) -> int:
         return self.id
 
-    def getEntrance(self) -> str:
+    def get_entrance(self) -> str:
         return self.entrance
 
-    def setEntrance(self, entrance: str):
+    def set_entrance(self, entrance: str):
         self.entrance = entrance
 
-    def getDeparture(self) -> str:
+    def get_departure(self) -> str:
         return self.departure
 
-    def setDeparture(self, departure: str):
+    def set_departure(self, departure: str):
         self.departure = departure
 
-    def getPrice(self) -> int:
+    def get_price(self) -> int:
         return self.price
 
-    def setPrice(self, price: int):
+    def set_price(self, price: int):
         self.price = price
 
-    def getCreationDate(self) -> str:
+    def get_creation_date(self) -> str:
         return self.creationDate
 
-    def getUpdateDate(self) -> str:
+    def get_update_date(self) -> str:
         return self.updateDate
 
 
@@ -48,37 +48,37 @@ class Room(models.Model):
     creationDate = models.DateTimeField(auto_now_add=True)
     updateDate = models.DateTimeField(auto_now=True)
 
-    def getId(self) -> int:
+    def get_id(self) -> int:
         return self.id
 
-    def getNumber(self) -> int:
+    def get_number(self) -> int:
         return self.number
 
-    def setNumber(self, number: int):
+    def set_number(self, number: int):
         self.number = number
 
-    def getType(self) -> str:
+    def get_type(self) -> str:
         return self.type
 
-    def setType(self, type: str):
+    def set_type(self, type: str):
         self.type = type
 
-    def getAvailability(self) -> bool:
+    def get_availability(self) -> bool:
         return self.availability
 
-    def setAvailability(self, availability: bool):
+    def set_availability(self, availability: bool):
         self.availability = availability
 
-    def getPrice(self) -> int:
+    def get_price(self) -> int:
         return self.price
 
-    def setPrice(self, price: int):
+    def set_price(self, price: int):
         self.price = price
 
-    def getCreationDate(self) -> str:
+    def get_creation_date(self) -> str:
         return self.creationDate
 
-    def getUpdateDate(self) -> str:
+    def get_update_date(self) -> str:
         return self.updateDate
 
 
@@ -89,23 +89,23 @@ class Item(models.Model):
     creationDate = models.DateTimeField(auto_now_add=True)
     updateDate = models.DateTimeField(auto_now=True)
 
-    def getId(self) -> int:
+    def get_id(self) -> int:
         return self.id
 
-    def getPrice(self) -> int:
+    def get_price(self) -> int:
         return self.price
 
-    def setPrice(self, price: int):
+    def set_price(self, price: int):
         self.price = price
 
-    def getRoom(self) -> Room:
+    def get_room(self) -> Room:
         return self.room
 
-    def setRoom(self, room: Room):
+    def set_room(self, room: Room):
         self.room = room
 
-    def getCreationDate(self) -> str:
+    def get_creation_date(self) -> str:
         return self.creationDate
 
-    def getUpdateDate(self) -> str:
+    def get_update_date(self) -> str:
         return self.updateDate
