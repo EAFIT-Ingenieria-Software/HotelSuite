@@ -19,6 +19,7 @@ class Migration(migrations.Migration):
                 ('type', models.TextField()),
                 ('availability', models.BooleanField()),
                 ('price', models.IntegerField()),
+                ('capacity', models.IntegerField()),
                 ('creationDate', models.DateTimeField(auto_now_add=True)),
                 ('updateDate', models.DateTimeField(auto_now=True)),
             ],
