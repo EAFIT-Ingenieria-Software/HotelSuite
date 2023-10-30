@@ -21,8 +21,8 @@ class Room:
         }
         return render(request, 'room/index.html', {"templateData": templateData})
 
-    def show(request, room_id):
-        room = models.Room.objects.get(pk=room_id)
+    def show(request, id: int):
+        room = models.Room.objects.get(pk=id)
         templateData = {
             'title': 'Room',
             'room': room,
