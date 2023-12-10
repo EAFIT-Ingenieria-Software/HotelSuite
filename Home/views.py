@@ -5,6 +5,6 @@ from django.shortcuts import render
 
 def index(request):
     template_data = {}
-    template_data["title"] = "Home"
+    template_data["title"] = "Home - HotelSuite"
 
     return render(request, "index.html", {"template_data": template_data})
