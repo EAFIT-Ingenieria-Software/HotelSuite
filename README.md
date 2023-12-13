@@ -16,20 +16,20 @@ Clone the project
 Install dependencies with pipenv
 
 ```bash
-    pipenv install
-    pipenv shell
+  pipenv install
+  pipenv shell
 ```
 
 Make migrations
 
 ```bash
-    python manage.py migrate
+  python manage.py migrate
 ```
 
 Launch the project
 
 ```bash
-    python manage.py runserver
+  python manage.py runserver
 ```
 
 ## Documentation
