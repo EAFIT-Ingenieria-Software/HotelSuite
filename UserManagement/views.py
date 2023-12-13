@@ -1,10 +1,9 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import login, logout
-from django.db import IntegrityError
+from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
-
+from django.db import IntegrityError
 from .models import User
-from .forms import UserCreationForm
+from .forms import UserCreationForm, UserLoginForm
 
 # Create your views here.
 
@@ -45,3 +44,23 @@ def sign_up(request):
 def log_out(request):
     logout(request)
     return redirect("home")
+
+
+def log_in(request):
+    if request.method == "GET":
+        return render(request, "login.html", {"form": UserLoginForm})
+    else:
+        user = authenticate(
+            request,
+            username=request.POST["username"],
+            password=request.POST["password"],
+        )
+        if user is None:
+            return render(
+                request,
+                "login.html",
+                {"form": UserLoginForm, "error": "Credentials do not match"},
+            )
+        else:
+            login(request, user)
+            return redirect("home")
