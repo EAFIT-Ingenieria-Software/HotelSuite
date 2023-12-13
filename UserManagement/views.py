@@ -11,7 +11,7 @@ from .forms import UserCreationForm
 
 def sign_up(request):
     if request.method == "GET":
-        return render(request, "signup.html", {"form": UserCreationForm})
+        return render(request, "sign_up.html", {"form": UserCreationForm})
     else:
         if request.POST.get("password1") == request.POST.get("password2"):
             try:
@@ -30,13 +30,13 @@ def sign_up(request):
             except IntegrityError:
                 return render(
                     request,
-                    "signup.html",
+                    "sign_up.html",
                     {"form": UserCreationForm, "error": "User already exists"},
                 )
         else:
             return render(
                 request,
-                "signup.html",
+                "sign_up.html",
                 {"form": UserCreationForm, "error": "Passwords did not match"},
             )
 
