@@ -9,7 +9,7 @@ from .forms import UserCreationForm
 # Create your views here.
 
 
-def SignUp(request):
+def sign_up(request):
     if request.method == "GET":
         return render(request, "signup.html", {"form": UserCreationForm})
     else:
