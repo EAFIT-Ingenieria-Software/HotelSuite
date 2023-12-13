@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
-from .forms import UserCreationForm
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
 from django.db import IntegrityError
+from django.contrib.auth.decorators import login_required
+
 from .models import User
+from .forms import UserCreationForm
 
 # Create your views here.
 
@@ -10,7 +12,7 @@ from .models import User
 def SignUp(request):
     if request.method == "GET":
         return render(request, "signup.html", {"form": UserCreationForm})
-    elif request.method == "POST":
+    else:
         if request.POST.get("password1") == request.POST.get("password2"):
             try:
                 user = User.objects.create_user(
@@ -37,3 +39,9 @@ def SignUp(request):
                 "signup.html",
                 {"form": UserCreationForm, "error": "Passwords did not match"},
             )
+
+
+@login_required
+def log_out(request):
+    logout(request)
+    return redirect("home")
