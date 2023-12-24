@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "Home",
-    "Admin",
     "UserManagement",
+    "BookingManagement",
 ]
 
 AUTH_USER_MODEL = "UserManagement.User"
