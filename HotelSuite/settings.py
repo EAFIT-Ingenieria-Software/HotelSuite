@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "Home",
     "UserManagement",
+    "BookingManagement",
 ]
 
 AUTH_USER_MODEL = "UserManagement.User"
