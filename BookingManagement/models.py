@@ -1,4 +1,5 @@
 from django.db import models
+from UserManagement.models import User
 
 # Create your models here.
 class Room(models.Model):
@@ -83,6 +84,47 @@ class Date(models.Model):
 
     def set_room(self, room):
         self.room = room
+
+    def get_created_at(self):
+        return self.created_at
+
+    def get_updated_at(self):
+        return self.updated_at
+
+class Booking(models.Model):
+    id = models.AutoField(primary_key=True)
+    price = models.IntegerField()
+    status = models.CharField(max_length=50)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = "bookings"
+
+    def __str__(self):
+        return self.user
+
+    def get_id(self):
+        return self.id
+
+    def get_price(self):
+        return self.price
+
+    def set_price(self, price):
+        self.price = price
+
+    def get_status(self):
+        return self.status
+
+    def set_status(self, status):
+        self.status = status
+
+    def get_user(self):
+        return self.user
+
+    def set_user(self, user):
+        self.user = user
 
     def get_created_at(self):
         return self.created_at
