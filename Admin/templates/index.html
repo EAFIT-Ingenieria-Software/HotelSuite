@@ -2,3 +2,13 @@
 
 {% block title %}{{ template_data.title }}{% endblock %}
 {% block section_title %}{{ template_data.section_title }}{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1>Welcome to the admin panel</h1>
+    <p class="lead">This is the admin panel for the website.</p>
+    <p class="lead">You can manage the website from here.</p>
+    <p class="lead">For educational purposes we are using a custom admin panel and not the default admin panel that
+        Django has.</p>
+</div>
+{% endblock %}
