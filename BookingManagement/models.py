@@ -2,12 +2,15 @@ from django.db import models
 from UserManagement.models import User
 
 # Create your models here.
+
+
 class Room(models.Model):
     id = models.AutoField(primary_key=True)
     number = models.IntegerField()
     type = models.CharField(max_length=50)
     price = models.IntegerField()
-    image = models.ImageField(upload_to="HotelSuite/room_images")
+    capacity = models.IntegerField()
+    image = models.ImageField(upload_to='images/')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -38,6 +41,12 @@ class Room(models.Model):
     def set_price(self, price):
         self.price = price
 
+    def get_capacity(self):
+        return self.capacity
+    
+    def set_capacity(self, capacity):
+        self.capacity = capacity
+
     def get_image(self):
         return self.image
 
@@ -49,6 +58,7 @@ class Room(models.Model):
 
     def get_updated_at(self):
         return self.updated_at
+
 
 class Date(models.Model):
     id = models.AutoField(primary_key=True)
@@ -90,6 +100,7 @@ class Date(models.Model):
 
     def get_updated_at(self):
         return self.updated_at
+
 
 class Booking(models.Model):
     id = models.AutoField(primary_key=True)
