@@ -4,13 +4,17 @@ from UserManagement.models import User
 # Create your models here.
 
 
+def image_path(instance, filename):
+    return f'media/rooms/{instance.id}/{filename}'
+
+
 class Room(models.Model):
     id = models.AutoField(primary_key=True)
     number = models.IntegerField()
     type = models.CharField(max_length=50)
     price = models.IntegerField()
     capacity = models.IntegerField()
-    image = models.ImageField(upload_to='images/')
+    image = models.ImageField(upload_to=image_path)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -43,7 +47,7 @@ class Room(models.Model):
 
     def get_capacity(self):
         return self.capacity
-    
+
     def set_capacity(self, capacity):
         self.capacity = capacity
 

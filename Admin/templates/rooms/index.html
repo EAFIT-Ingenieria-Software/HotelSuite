@@ -6,7 +6,8 @@
 {% block content %}
 <div class="text-center">
     <div class="d-flex justify-content-end">
-        <a type="button" href="" class="btn btn-primary"><i class="fa-solid fa-plus"></i></a>
+        <a type="button" href="{% url 'room_manager_create' %}" class="btn btn-primary"><i
+                class="fa-solid fa-plus"></i></a>
     </div>
     <table class="table">
         <thead>
@@ -20,13 +21,14 @@
             {% for room in template_data.rooms %}
             <tr>
                 <td class="align-middle">{{ room.get_id }}</td>
-                <td class="align-middle">{{ room.get_type }}</td>
+                <td class="align-middle"><img src="{{ room.get_image }}" alt=""></td>
                 <td class="d-flex justify-content-center">
                     <a type="button" href="" class="btn btn-success me-2"><i class="fa-solid fa-eye"></i></a>
                     <a type="button" href="" class="btn btn-primary me-2"><i class="fa-solid fa-pencil"></i></a>
                     <a type="button" href="" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
                 </td>
             </tr>
+            <img src="{{ room.get_image }}" alt="">
             {% endfor %}
         </tbody>
     </table>
