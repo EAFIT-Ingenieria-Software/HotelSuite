@@ -52,3 +52,12 @@ class RoomManager:
             return render(request, 'rooms/create.html', {"template_data": template_data, "form": form})
 
         return render(request, 'rooms/create.html', {"template_data": template_data})
+
+    def view(request, id):
+        template_data = {}
+        template_data['title'] = 'HotelSuite'
+        template_data['section_title'] = 'Room'
+
+        template_data['room'] = Room.objects.get(pk=id)
+
+        return render(request, 'rooms/view.html', {"template_data": template_data})
