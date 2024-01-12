@@ -25,7 +25,8 @@
                 <td class="d-flex justify-content-center">
                     <a type="button" href="{% url 'room_manager_view' room.get_id %}" class="btn btn-success me-2"><i
                             class="fa-solid fa-eye"></i></a>
-                    <a type="button" href="" class="btn btn-primary me-2"><i class="fa-solid fa-pencil"></i></a>
+                    <a type="button" href="{% url 'room_manager_edit' room.get_id %}" class="btn btn-primary me-2"><i
+                            class="fa-solid fa-pencil"></i></a>
                     <a type="button" href="" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
                 </td>
             </tr>

@@ -1,9 +1,9 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.urls import reverse
 
 from BookingManagement.models import Room
-from .forms import RoomCreationForm
+from .forms import RoomCreationForm, RoomEditForm
 
 # Create your views here.
 
@@ -61,3 +61,27 @@ class RoomManager:
         template_data['room'] = Room.objects.get(pk=id)
 
         return render(request, 'rooms/view.html', {"template_data": template_data})
+
+    def edit(request, id):
+        template_data = {}
+        template_data['title'] = 'HotelSuite'
+        template_data['section_title'] = 'Room edit'
+
+        room = get_object_or_404(Room, pk=id)
+
+        if request.method == 'GET':
+            form = RoomEditForm(instance=room)
+
+            return render(request, 'rooms/edit.html', {"template_data": template_data, "form": form})
+
+        elif request.method == 'POST':
+            form = RoomEditForm(request.POST, request.FILES, instance=room)
+
+            if form.is_valid():
+                form.save()
+
+                messages.success(request, 'Room updated successfully')
+
+                return redirect(reverse('room_manager_index'))
+
+            return render(request, 'rooms/edit.html', {"template_data": template_data, "form": form})
