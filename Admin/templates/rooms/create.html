@@ -4,26 +4,26 @@
 {% block section_title %}{{ template_data.section_title }}{% endblock %}
 
 {% block content %}
-<div class="card mb-3">
-    <div class="row g-0">
-        <div>
-            <div class="card-body">
-                {% if error %}
-                <div class="alert alert-danger mt-3" role="alert">
-                    {{ error }}
+    <div class="card mb-3">
+        <div class="row g-0">
+            <div>
+                <div class="card-body">
+                    {% if error %}
+                        <div class="alert alert-danger mt-3" role="alert">
+                            {{ error }}
+                        </div>
+                    {% endif %}
+                    <p class="card-text">
+                        <form enctype="multipart/form-data" method="POST">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit" class="btn btn-primary">
+                                Create
+                            </button>
+                        </form>
+                    </p>
                 </div>
-                {% endif %}
-                <p class="card-text">
-                <form enctype="multipart/form-data" method="POST">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button type="submit" class="btn btn-primary">
-                        Create
-                    </button>
-                </form>
-                </p>
             </div>
         </div>
     </div>
-</div>
 {% endblock %}
