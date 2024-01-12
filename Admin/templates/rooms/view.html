@@ -14,7 +14,8 @@
             <p class="card-text">Price: {{ template_data.room.price }}</p>
             <a href="{% url 'room_manager_edit' template_data.room.get_id %}"
                 class="btn btn-outline-success btn-sm">Edit</a>
-            <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-trash-can"></i></a>
+            <a href="{% url 'room_manager_delete' room.get_id %}" class="btn btn-outline-danger btn-sm"><i
+                    class="far fa-trash-can"></i></a>
         </div>
     </div>
 </div>

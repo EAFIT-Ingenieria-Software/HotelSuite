@@ -85,3 +85,13 @@ class RoomManager:
                 return redirect(reverse('room_manager_index'))
 
             return render(request, 'rooms/edit.html', {"template_data": template_data, "form": form})
+
+        return render(request, 'rooms/edit.html', {"template_data": template_data})
+
+    def delete(request, id):
+        room = get_object_or_404(Room, pk=id)
+        room.delete()
+
+        messages.success(request, 'Room deleted successfully')
+
+        return redirect(reverse('room_manager_index'))
