@@ -58,7 +58,9 @@ class RoomManager:
         template_data['title'] = 'HotelSuite'
         template_data['section_title'] = 'Room'
 
-        template_data['room'] = Room.objects.get(pk=id)
+        room = get_object_or_404(Room, pk=id)
+
+        template_data['room'] = room
 
         return render(request, 'rooms/view.html', {"template_data": template_data})
 
