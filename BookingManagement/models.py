@@ -5,7 +5,7 @@ from UserManagement.models import User
 
 
 def image_path(instance, filename):
-    return f'media/rooms/{instance.id}/{filename}'
+    return f'rooms/{instance.id}/{filename}'
 
 
 class Room(models.Model):
