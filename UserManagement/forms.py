@@ -9,6 +9,7 @@ class UserCreationForm(UserCreationForm):
     class Meta:
         model = User
         fields = (
+            "username",
             "first_name",
             "second_name",
             "last_name",
@@ -20,6 +21,7 @@ class UserCreationForm(UserCreationForm):
     def __init__(self, *args, **kwargs):
         super(UserCreationForm, self).__init__(*args, **kwargs)
         for fieldname in [
+            "username",
             "first_name",
             "second_name",
             "last_name",
@@ -40,7 +42,6 @@ class UserLoginForm(AuthenticationForm):
 
     def __init__(self, *args, **kwargs):
         super(UserLoginForm, self).__init__(*args, **kwargs)
-        self.fields["username"].label = "Email"
         for fieldname in ["username", "password"]:
             self.fields[fieldname].help_text = None
             self.fields[fieldname].widget.attrs.update(
