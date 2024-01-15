@@ -104,3 +104,59 @@ class Booking(models.Model):
 
     def get_updated_at(self):
         return self.updated_at
+
+
+class Item(models.Model):
+    id = models.AutoField(primary_key=True)
+    price = models.IntegerField()
+    room = models.ForeignKey(Room, on_delete=models.CASCADE)
+    booking = models.ForeignKey(Booking, on_delete=models.CASCADE)
+    entrance = models.DateTimeField()
+    exit = models.DateTimeField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = "items"
+
+    def __str__(self):
+        return self.name
+
+    def get_id(self):
+        return self.id
+
+    def get_price(self):
+        return self.price
+
+    def set_price(self, price):
+        self.price = price
+
+    def get_room(self):
+        return self.room
+
+    def set_room(self, room):
+        self.room = room
+
+    def get_booking(self):
+        return self.booking
+
+    def set_booking(self, booking):
+        self.booking = booking
+
+    def get_entrance(self):
+        return self.entrance
+
+    def set_entrance(self, entrance):
+        self.entrance = entrance
+
+    def get_exit(self):
+        return self.exit
+
+    def set_exit(self, exit):
+        self.exit = exit
+
+    def get_created_at(self):
+        return self.created_at
+
+    def get_updated_at(self):
+        return self.updated_at
