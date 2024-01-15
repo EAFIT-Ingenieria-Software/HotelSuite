@@ -19,7 +19,6 @@ class UserCreationForm(UserCreationForm):
 
     def __init__(self, *args, **kwargs):
         super(UserCreationForm, self).__init__(*args, **kwargs)
-
         for fieldname in [
             "first_name",
             "second_name",
@@ -30,7 +29,8 @@ class UserCreationForm(UserCreationForm):
             "password2",
         ]:
             self.fields[fieldname].help_text = None
-            self.fields[fieldname].widget.attrs.update({"class": "form-control"})
+            self.fields[fieldname].widget.attrs.update(
+                {"class": "form-control"})
 
 
 class UserLoginForm(AuthenticationForm):
@@ -40,9 +40,8 @@ class UserLoginForm(AuthenticationForm):
 
     def __init__(self, *args, **kwargs):
         super(UserLoginForm, self).__init__(*args, **kwargs)
-
         self.fields["username"].label = "Email"
-
         for fieldname in ["username", "password"]:
             self.fields[fieldname].help_text = None
-            self.fields[fieldname].widget.attrs.update({"class": "form-control"})
+            self.fields[fieldname].widget.attrs.update(
+                {"class": "form-control"})

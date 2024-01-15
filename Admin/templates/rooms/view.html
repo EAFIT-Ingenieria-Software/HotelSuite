@@ -1,0 +1,22 @@
+{% extends 'admin.html' %}
+
+{% block title %}{{ template_data.title }}{% endblock %}
+{% block section_title %}{{ template_data.section_title }}{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="card-body">
+            <img src="{{ template_data.room.image.url }}" class="card-img-top" alt="...">
+            <div class="m-2">
+                <h5 class="card-title">Room {{ template_data.room.number }}</h5>
+                <h5 class="card-title">{{ template_data.room.type }}</h5>
+                <p class="card-text">Capacity: {{ template_data.room.capacity }}</p>
+                <p class="card-text">Price: {{ template_data.room.price }}</p>
+                <a href="{% url 'room_manager_edit' template_data.room.get_id %}"
+                   class="btn btn-outline-success btn-sm">Edit</a>
+                <a href="{% url 'room_manager_delete' room.get_id %}" class="btn btn-outline-danger btn-sm"><i
+                    class="far fa-trash-can"></i></a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
