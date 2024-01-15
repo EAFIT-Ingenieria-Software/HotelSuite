@@ -26,12 +26,6 @@ Make migrations
   python manage.py migrate
 ```
 
-Create a superuser (to manage the database)
-
-```bash
-  python manage.py createsuperuser
-```
-
 Launch the project
 
 ```bash
