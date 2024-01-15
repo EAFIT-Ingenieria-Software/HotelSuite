@@ -21,7 +21,7 @@ class RoomManager:
         template_data['title'] = 'HotelSuite'
         template_data['section_title'] = 'Rooms'
         template_data['rooms'] = Room.objects.all()
-        return render(request, 'rooms/index.html', {"template_data": template_data})
+        return render(request, 'admin_rooms/index.html', {"template_data": template_data})
 
     def create(request):
         template_data = {}
@@ -40,8 +40,8 @@ class RoomManager:
             return redirect(reverse('room_manager_index'))
         elif request.method == 'GET':
             form = RoomCreationForm(request.POST, request.FILES)
-            return render(request, 'rooms/create.html', {"template_data": template_data, "form": form})
-        return render(request, 'rooms/create.html', {"template_data": template_data})
+            return render(request, 'admin_rooms/create.html', {"template_data": template_data, "form": form})
+        return render(request, 'admin_rooms/create.html', {"template_data": template_data})
 
     def view(request, id):
         template_data = {}
@@ -49,7 +49,7 @@ class RoomManager:
         template_data['section_title'] = 'Room'
         room = get_object_or_404(Room, pk=id)
         template_data['room'] = room
-        return render(request, 'rooms/view.html', {"template_data": template_data})
+        return render(request, 'admin_rooms/view.html', {"template_data": template_data})
 
     def edit(request, id):
         template_data = {}
@@ -58,15 +58,15 @@ class RoomManager:
         room = get_object_or_404(Room, pk=id)
         if request.method == 'GET':
             form = RoomEditForm(instance=room)
-            return render(request, 'rooms/edit.html', {"template_data": template_data, "form": form})
+            return render(request, 'admin_rooms/edit.html', {"template_data": template_data, "form": form})
         elif request.method == 'POST':
             form = RoomEditForm(request.POST, request.FILES, instance=room)
             if form.is_valid():
                 form.save()
                 messages.success(request, 'Room updated successfully')
                 return redirect(reverse('room_manager_index'))
-            return render(request, 'rooms/edit.html', {"template_data": template_data, "form": form})
-        return render(request, 'rooms/edit.html', {"template_data": template_data})
+            return render(request, 'admin_rooms/edit.html', {"template_data": template_data, "form": form})
+        return render(request, 'admin_rooms/edit.html', {"template_data": template_data})
 
     def delete(request, id):
         room = get_object_or_404(Room, pk=id)
