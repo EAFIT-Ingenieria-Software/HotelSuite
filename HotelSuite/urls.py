@@ -18,9 +18,11 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from . import settings
 from Home import views as home
+from BookingManagement.urls import RoomUrls
 
 urlpatterns = [
     path("", home.index, name="home"),
     path("admin/", include("Admin.urls")),
     path("user/", include("UserManagement.urls")),
+    path("rooms/", include(RoomUrls.urlpatterns)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

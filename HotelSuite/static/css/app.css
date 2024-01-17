@@ -1,0 +1,5 @@
+.room-card-image {
+  width: 100%x;
+  height: 200px;
+  object-fit: fill;
+}
