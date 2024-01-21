@@ -1,23 +1,41 @@
 {% extends 'app.html' %}
-
-{% block title %} {{ template_data.title }} {% endblock %}
-
+{% block title %}{{ template_data.title }}{% endblock %}
 {% block content %}
-<div class="card-group">
-    {% for room in template_data.rooms %}
-    <div class="col-md-4 col-lg-4 m-2">
-        <div class="card h-100 text-center">
-            <img class="card-img-top room-card-image" src="{{ room.image.url }}" alt="Card image cap">
-            <div class="card-body">
-                <h3 class="card-title">{{ room.get_type }}</h3>
-                <h5 class="card-text">${{ room.price }}/night</h5>
-                <p class="card-text">Capacity: {{ room.capacity }}</p>
-            </div>
-            <div class="card-footer">
-                <a href="" class="btn btn-primary">More information</a>
-            </div>
+    <form method="post">
+        {% csrf_token %}
+        <div class="row form-group">
+            <label for="{{ form.entrance_date.id_for_label }}"
+                   class="col-sm-1 col-form-label">Entrance</label>
+            <div class="col-sm-4">{{ form.entrance_date }}</div>
+            <label for="{{ form.exit_date.id_for_label }}"
+                   class="col-sm-1 col-form-label">Exit</label>
+            <div class="col-sm-4">{{ form.exit_date }}</div>
+            <button type="submit" class="btn btn-primary">Search</button>
         </div>
+    </form>
+    <div class="card-group">
+        {% for room in template_data.rooms %}
+            <div class="col-md-4 col-lg-4 m-2">
+                <div class="card h-100 text-center">
+                    <img class="card-img-top room-card-image"
+                         src="{{ room.image.url }}"
+                         alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-title">{{ room.get_type }}</h3>
+                        <h5 class="card-text">${{ room.price }}/night</h5>
+                        <p class="card-text">Capacity: {{ room.capacity }}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="" class="btn btn-primary">More information</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
+    <script type="text/javascript">
+        $(function() {
+            $('#datepicker').datepicker();
+        });
+    </script>
 {% endblock %}
+

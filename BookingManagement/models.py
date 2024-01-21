@@ -1,4 +1,5 @@
 from django.db import models
+
 from UserManagement.models import User
 
 # Create your models here.
